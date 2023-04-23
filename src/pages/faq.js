@@ -1,13 +1,10 @@
 import Link from 'next/link'
+import Layout from '../../components/layout';
 
 export default function FAQ() {
   return (
-    <div>
+    <Layout>
       <h1>FAQ</h1>
-      <p>Hola!</p>
-
-      <Link href="/">Ir a Home</Link>
-      
-    </div>
+    </Layout>
   );
 }

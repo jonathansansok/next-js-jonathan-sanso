@@ -1,24 +1,22 @@
 import Link from "next/link";
-import style from '../src/styles/menu.module.css'
+import style from "../src/styles/menu.module.css";
 export default function Menu() {
   return (
     <nav className={style.menu}>
       <div>
         <Link href="/">
-          <div>Home</div>
+          <div className={style.link}>Home</div>
         </Link>
       </div>
       <div>
         <Link href="/store">
-          <div>store</div>
+          <div className={style.link}>store</div>
         </Link>
         <Link href="/faq">
-          <div>faq</div>
+          <div className={style.link}>faq</div>
         </Link>
       </div>
-      <div href="#"> Cart (0)
-
-      </div>
+      <div href="#" className={style.link}> Cart (0)</div>
     </nav>
   );
 }

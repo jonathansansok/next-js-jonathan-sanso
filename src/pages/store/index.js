@@ -1,12 +1,9 @@
 import Link from "next/link";
-
+import Layout from "../../../components/layout";
 export default function Index(){
     return(
-        <div>
+        <Layout>
             <h1>Store</h1>
-            <Link href="/">Ir a Home</Link>
-            <br></br>
-            <Link href="/faq">Ir a FAQ</Link>
-        </div>
+        </Layout>
     )
 }
