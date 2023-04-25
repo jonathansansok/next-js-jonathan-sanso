@@ -12,7 +12,7 @@ export default function Product({ item, showAs }) {
   return (
     <div className={style.item}>
       <div>
-        <Link href={`/store/url-a-mi-componente`}>
+        <Link href={`/store/${item.id}`}>
           <div>
             <Image
               src={item.image}
