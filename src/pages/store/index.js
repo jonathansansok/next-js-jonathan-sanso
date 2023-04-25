@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Layout from "../../../components/layout";
+import Image from 'next/image'
 import { getItems } from "../../../services/itemService";
+import Product from "../../../components/product";
 export default function Index({items}) {
   return (
     <Layout>
       <h1>Store</h1>
       {
-        items && items.map(item => <div key={item.div}>{item.title}</div>)
-      }
+        items && items.map(item => (
+          <Product key={item.id}item={item} showAs="Default"/>)
+      )}
     </Layout>
   );
 
