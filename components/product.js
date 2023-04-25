@@ -1,9 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import style from "../src/styles/product.module.css"
+import style from "../src/styles/product.module.css";
+
 export default function Product({ item, showAs }) {
   if (showAs === "Page") {
-    return <div>Page</div>;
+    return (
+      <div>
+        
+        <h2>{item.title}</h2>
+      </div>
+    );
   }
   if (showAs === "ListItem") {
     return <div>List Item</div>;
@@ -26,21 +32,14 @@ export default function Product({ item, showAs }) {
       <div>
         <h3>
           <Link href={`/store/url-a-mi-componente`}>
-            <div>
-              {item.title}
-            </div>
+            <div>{item.title}</div>
           </Link>
         </h3>
       </div>
-    <div>
-        ${item.price}
-    </div>
-    <div>
-       <button>Add to Cart</button>
-    </div>
-
-
-
+      <div>${item.price}</div>
+      <div>
+        <button>Add to Cart</button>
+      </div>
     </div>
   );
 }
